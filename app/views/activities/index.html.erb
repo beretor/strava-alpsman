@@ -1,14 +1,25 @@
 <p style="color: green"><%= notice %></p>
+<h1>Strava Activities</h1>
 
-<h1>Activities</h1>
-
-<div id="activities">
-  <% @activities.each do |activity| %>
-    <%= render activity %>
-    <p>
-      <%= link_to "Show this activity", activity %>
-    </p>
-  <% end %>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Duration</th>
+      <th>Mileage</th>
+      <th>Activity Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @activities.each do |activity| %>
+      <tr>
+        <td><%= activity[:name] %></td>
+        <td><%= activity[:duration] %></td>
+        <td><%= activity[:mileage] %></td>
+        <td><%= activity[:activity_type] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to "New activity", new_activity_path %>
