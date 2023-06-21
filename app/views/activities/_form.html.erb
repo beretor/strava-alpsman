@@ -18,7 +18,7 @@
 
   <div>
     <%= form.label :activity_type, style: "display: block" %>
-    <%= form.text_field :activity_type %>
+     <%= form.select :activity_type, Activity.activity_types.keys, include_blank: true %>
   </div>
 
   <div>
