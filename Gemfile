@@ -50,6 +50,11 @@ gem "bootsnap", require: false
 
 gem 'strava-ruby-client'
 gem 'bootstrap'
+gem 'faraday'
+
+gem 'omniauth'
+gem 'omniauth-strava'
+gem 'multi_json'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

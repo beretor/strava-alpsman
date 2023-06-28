@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "activities#index"
   get '/activity', to: 'activities#index'
-  get '/strava/authorize', to: 'strava#authorize'
-  get '/strava/callback', to: 'strava#callback'
+  get '/signout', to: 'sessions#destroy', as: 'signout'
+  get '/sessions/new', to: 'sessions#new'
 end
